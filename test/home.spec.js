@@ -22,7 +22,7 @@ describe("The homepage", function () {
 		request
 			.get('/')
 	  		.expect(200) // OK
-			.expect('Content-Type', /html/) // displays
+			
 			.end(done);
 	});
 

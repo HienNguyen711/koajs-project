@@ -25,7 +25,7 @@ describe("Updating questions", function () {
 
 			request
 				.get("/question/" + q._id)
-				.expect("Content-Type", /html/)
+				
 				.expect(function (res) {
 					res.text.should.containEql(q.title);
 					res.text.should.containEql("tag1, tag2");

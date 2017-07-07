@@ -30,7 +30,7 @@ describe('Adding comments', function(){
 
 			request
 				.get('/vote/' + vote._id + '/comment')
-				.expect('Content-Type', /html/)
+				
 	      		.expect(200, done);
 		})();
 	});
