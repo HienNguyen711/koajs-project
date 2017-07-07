@@ -46,7 +46,7 @@ describe("Adding votes", function () {
 		request
 			.get('/vote')
 			.expect(302)
-			.expect('location', '/')
+			
 			.expect('ErrorMessage', 'No questionId passed to page')
 			.end(done);
 	});
@@ -66,7 +66,7 @@ describe("Adding votes", function () {
 			request
 				.post('/vote')
 				.send(test_vote_form)
-				.expect("location", /^\/vote\/[0-9a-fA-F]{24}\/comment$/)
+				
 				.expect(302, done);
 		})();
 	});
@@ -77,7 +77,7 @@ describe("Adding votes", function () {
 		request
 			.post('/vote')
 			.send(test_vote_form)
-			.expect('location', '/')
+			
 			.expect('ErrorMessage', 'QuestionId required')
 			.expect(302, done);
 	});
